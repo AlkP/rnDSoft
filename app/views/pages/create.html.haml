@@ -1,0 +1,12 @@
+%table.table.table-striped
+  %thead
+    = render 'page_title'
+  %tbody.tbody-pages
+    = render @pages
+
+%br
+
+= paginate @pages, :theme => 'twitter-bootstrap-3',
+                   :pagination_class => "pagination-sm"
+
+%br
