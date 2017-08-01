@@ -5,34 +5,41 @@
       Name
     %div.col-sm-8
       - if action_name == "show"
-        = f.text_field :name, autofocus: true, :class => "form-control", disabled: :true
+        = f.text_field :name, :class => "form-control", disabled: :true
       - else
-        = f.text_field :name, autofocus: true, :class => "form-control"
+        = f.text_field :name, :class => "form-control"
   %div.form-group
     %label.col-sm-4.control-label{ for: 'inputPageDescriprion' }
       Descriprion
     %div.col-sm-8
       - if action_name == "show"
-        = f.text_area :description, autofocus: true, :class => "form-control", disabled: :true
+        = f.text_area :description, :class => "form-control", disabled: :true
       - else
-        = f.text_area :description, autofocus: true, :class => "form-control"
+        = f.text_area :description, :class => "form-control"
   %div.form-group
     %label.col-sm-4.control-label{ for: 'inputPageAddressn' }
       Address
     %div.col-sm-8
       - if action_name == "show"
-        = f.text_field :address, autofocus: true, :class => "form-control", disabled: :true
+        = f.text_field :address, :class => "form-control", disabled: :true
       - else
-        = f.text_field :address, autofocus: true, :class => "form-control"
+        = f.text_field :address, :class => "form-control"
   %div.form-group
     %label.col-sm-4.control-label{ for: 'inputPageTags' }
       Tags
     %div.col-sm-8
       - if action_name == "show"
-        = f.text_area :tags, autofocus: true, :class => "form-control", disabled: :true
+        = f.text_area :tags, :class => "form-control", disabled: :true
       - else
-        = f.text_area :tags, autofocus: true, :class => "form-control"
-      
+        = f.text_area :tags, :class => "form-control"
+  %div.form-group
+    %label.col-sm-4.control-label{ for: 'inputPageTags' }
+      Category
+    %div.col-sm-8
+      - if action_name == "show"
+        = f.text_field :category, :class => "form-control", disabled: :true
+      - else
+        = f.select :category, Page.categories.keys.map { |w| [w.humanize, w] }, :class => "form-control"
   %div.form-group
     %label.col-sm-4.control-label
     %div.col-sm-8
